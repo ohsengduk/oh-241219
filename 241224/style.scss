@@ -1,0 +1,291 @@
+@import "reset.scss";
+@import "./style/varaibles";
+
+@mixin buttonstyle {
+  margin: 0 auto;
+  width: 360px;
+  height: 44px;
+  display: block;
+  line-height: 44px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #686868;
+  font-weight: 600;
+  border: 1px solid #cccc;
+  z-index: 2;
+}
+
+@mixin headerstyle {
+  padding: 0 33px 135px;
+  background: map-get($contens-color, lightcolor);
+}
+
+@mixin filter {
+  content: "";
+  position: absolute;
+  width: 428px;
+  height: 439px;
+  background: linear-gradient(
+    to bottom,
+    map-get($contens-color, lightcolor) 80%,
+    transparent
+  );
+  z-index: 1;
+  left: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /*가로 축 */
+  align-items: center; /*세로 교차축으로 */
+  font-family: Arial, Helvetica, sans-serif;
+
+  main {
+    width: 428px;
+    height: 926px;
+
+    // background: map-get($contens-color, subcolor);
+    /*$main-ba-color*/
+    // background: $subtitle-ba-color;
+    background: map-get($contens-color, bgcolor);
+    // border: 1px solid #ccc;
+    box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.6);
+    padding-top: 60px;
+    font-size: 17px;
+
+    header#topcontents {
+      height: auto;
+      text-align: center;
+      margin-bottom: 30px;
+      display: block;
+      // border: 1px solid #ccc;
+
+      img {
+        margin-bottom: 30px;
+      }
+
+      h4 {
+        font-size: 1.17rem;
+        font-weight: lighter;
+
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+
+    section#snslogo {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+
+      margin: 200px 0;
+      h4 {
+        font-size: 0.94rem;
+        color: map-get($contens-color, textcolor);
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      ul {
+        // border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+      ul > li {
+        display: inline-block;
+        padding: 10px;
+      }
+    }
+
+    footer#bottomcontensts {
+      margin: 0 auto;
+      // border: 1px solid #000000;
+
+      .btn {
+        width: 360px;
+        height: 44px;
+        display: block;
+        background: map-get($contens-color, text-color);
+        line-height: 44px;
+        border-radius: 10px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 12px;
+
+        // margin: 0 12px auto;
+        color: #686868;
+        font-weight: 600;
+
+        .fa-download {
+          transform: rotate(-90deg);
+        }
+      }
+
+      div#usersearch {
+        text-align: center;
+        // color: #000;
+        // color: map-get($contens-color, sscolor);
+        font-size: 1.07rem;
+        // border-style: dotted;
+        // border: 1px solid #f00;
+
+        // span.desc {
+        //   &:first-child{
+        //     border-right:1px solid map-get($contens-color, textcolor);
+        //     padding-right: 40px;
+        //   }
+        //   &:last-child{
+        //     margin-left: 40px;
+        //     // background: #000000;
+        //   }
+
+        // }
+
+        span {
+          // color: #333;
+          &:first-child {
+            position: relative;
+            margin-right: 80px;
+
+            &::after {
+              content: "";
+              position: absolute;
+              top: 25%;
+              right: -40px;
+              width: 2px;
+              height: 14px;
+              background: map-get($contens-color, textcolor);
+            }
+          }
+        } //span
+      }
+    }
+    &.friedsbg {
+      header {
+        // border: 1px solid #f00;
+        @include headerstyle;
+      }
+      position: relative;
+
+      section {
+        width: 100%;
+        // border: 1px solid #f00;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /*변환효과*/
+
+        ul {
+          li {
+            text-align: center;
+            a {
+              font-size: 2.35rem;
+            }
+          }
+        }
+      }
+
+      footer {
+        .buttons {
+          z-index: 2;
+          position: absolute;
+          bottom: 75px;
+          display: flex;
+          gap: 12px;
+
+          .btn {
+            @include buttonstyle;
+            width: 174px;
+            background: map-get($contens-color, bgcolor);
+            &:first-child {
+              background: map-get($contens-color, btncolor);
+            }
+          }
+        }
+      }
+
+      h4 {
+        display: inline-block;
+        margin: 30px 0 30px 280px;
+      }
+
+      // main.friedsbg > header {
+      //   z-index: 3;
+      //   width: 100px;
+      //   height: 17200px;
+      //   // border: 1px solid #f00;
+      //   // background: #ccc;
+      // }
+
+      &::before {
+        @include filter;
+        top: 0;
+      }
+
+      &::after {
+        @include filter;
+        transform: rotate(180deg);
+        bottom: 0;
+      }
+    }
+    &.introbg {
+      padding: 0 33px 135px;
+      background: map-get($contens-color, lightcolor);
+
+      header {
+        position: relative;
+        width: 100%;
+        height: 142px;
+        margin-top: 50px;
+        // border: 1px solid #000000;
+
+        h4 {
+          position: absolute;
+          right: 0;
+          top: 0;
+          font-size: 1.17rem;
+          font-weight: lighter;
+          // border: 1px solid #000000;
+        }
+
+        p {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          font-size: 1.47rem; /*17*/
+          // border: 1px solid #000000;
+
+          span {
+            font-weight: bold;
+            font-size: 1.47rem;
+          }
+        }
+      }
+
+      section {
+        margin: 50px 50px 106px 50px;
+      }
+
+      footer {
+        // margin-top: 50px;
+        // background: #000000;
+
+        footer > span {
+          display: block;
+          text-align: center;
+        }
+        .btn {
+          @include buttonstyle;
+          margin-top: 10px;
+          background: map-get($contens-color, bgcolor);
+        }
+      }
+    }
+  } //main
+}

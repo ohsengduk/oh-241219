@@ -1,0 +1,230 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  color: rgb(252, 2, 214);
+}
+
+/*변수선언이 가능하다*/
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center; /*가로 축 */
+  align-items: center; /*세로 교차축으로 */
+  font-family: Arial, Helvetica, sans-serif;
+}
+body main {
+  width: 428px;
+  height: 926px;
+  /*$main-ba-color*/
+  background: #ffde03;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+  padding-top: 60px;
+  font-size: 17px;
+}
+body main header#topcontents {
+  height: auto;
+  text-align: center;
+  margin-bottom: 30px;
+  display: block;
+}
+body main header#topcontents img {
+  margin-bottom: 30px;
+}
+body main header#topcontents h4 {
+  font-size: 1.17rem;
+  font-weight: lighter;
+}
+body main header#topcontents h4 span {
+  font-weight: bold;
+}
+body main section#snslogo {
+  margin: 200px 0;
+}
+body main section#snslogo h4 {
+  font-size: 0.94rem;
+  color: #4833cc;
+  text-align: center;
+  margin-bottom: 10px;
+}
+body main section#snslogo ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+body main section#snslogo ul > li {
+  display: inline-block;
+  padding: 10px;
+}
+body main footer#bottomcontensts {
+  margin: 0 auto;
+}
+body main footer#bottomcontensts .btn {
+  width: 360px;
+  height: 44px;
+  display: block;
+  line-height: 44px;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 12px;
+  color: #686868;
+  font-weight: 600;
+}
+body main footer#bottomcontensts .btn .fa-download {
+  transform: rotate(-90deg);
+}
+body main footer#bottomcontensts div#usersearch {
+  text-align: center;
+  font-size: 1.07rem;
+}
+body main footer#bottomcontensts div#usersearch span:first-child {
+  position: relative;
+  margin-right: 80px;
+}
+body main footer#bottomcontensts div#usersearch span:first-child::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: -40px;
+  width: 2px;
+  height: 14px;
+  background: #4833cc;
+}
+body main.friedsbg {
+  position: relative;
+}
+body main.friedsbg header {
+  padding: 0 33px 135px;
+  background: #ffffff;
+}
+body main.friedsbg section {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /*변환효과*/
+}
+body main.friedsbg section ul li {
+  text-align: center;
+}
+body main.friedsbg section ul li a {
+  font-size: 2.35rem;
+}
+body main.friedsbg footer .buttons {
+  z-index: 2;
+  position: absolute;
+  bottom: 75px;
+  display: flex;
+  gap: 12px;
+}
+body main.friedsbg footer .buttons .btn {
+  margin: 0 auto;
+  width: 360px;
+  height: 44px;
+  display: block;
+  line-height: 44px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #686868;
+  font-weight: 600;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  z-index: 2;
+  width: 174px;
+  background: #ffde03;
+}
+body main.friedsbg footer .buttons .btn:first-child {
+  background: #f5efef;
+}
+body main.friedsbg h4 {
+  display: inline-block;
+  margin: 30px 0 30px 280px;
+}
+body main.friedsbg::before {
+  content: "";
+  position: absolute;
+  width: 428px;
+  height: 439px;
+  background: linear-gradient(to bottom, #ffffff 80%, transparent);
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+body main.friedsbg::after {
+  content: "";
+  position: absolute;
+  width: 428px;
+  height: 439px;
+  background: linear-gradient(to bottom, #ffffff 80%, transparent);
+  z-index: 1;
+  left: 0;
+  transform: rotate(180deg);
+  bottom: 0;
+}
+body main.introbg {
+  padding: 0 33px 135px;
+  background: #ffffff;
+}
+body main.introbg header {
+  position: relative;
+  width: 100%;
+  height: 142px;
+  margin-top: 50px;
+}
+body main.introbg header h4 {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.17rem;
+  font-weight: lighter;
+}
+body main.introbg header p {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-size: 1.47rem; /*17*/
+}
+body main.introbg header p span {
+  font-weight: bold;
+  font-size: 1.47rem;
+}
+body main.introbg section {
+  margin: 50px 50px 106px 50px;
+}
+body main.introbg footer footer > span {
+  display: block;
+  text-align: center;
+}
+body main.introbg footer .btn {
+  margin: 0 auto;
+  width: 360px;
+  height: 44px;
+  display: block;
+  line-height: 44px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #686868;
+  font-weight: 600;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  z-index: 2;
+  margin-top: 10px;
+  background: #ffde03;
+}

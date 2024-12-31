@@ -1,0 +1,137 @@
+@import url("../style/rset.css");
+
+/* #default {
+  font-weight: bold;
+  font-size: 16px;
+}     수업이 진해을 위해서 그냥 한것이다.        */
+
+body {
+  width: 100%;
+  height: 100vh; /*사이즈랑 상관 없이 눈에 보여지는 화면을 말하는 단위를 vh*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: auto;
+  /* background: #ddd; */
+
+  main {
+    width: 390px;
+    height: 800px;
+    /* border: 1px solid #ccd; */
+    overflow: hidden;
+
+    #navigation {
+      width: 500px;
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      gap: 30px;
+      margin-left: 35px;
+      /* border: 1px solid #ccc; */
+
+      .nav-item {
+        font-size: 1.2rem;
+        font-weight: 900;
+        &:first-child {
+          background: #000;
+          color: #fff;
+          padding: 5px 15px;
+          border-radius: 28px;
+          .fa-heart {
+            color: #f00;
+            font-size: 15px;
+            display: inline-block;
+            margin-left: 3px;
+          }
+        }
+      }
+    }
+    section {
+      width: 100%;
+      padding: 40px 35px 35px;
+      display: flex;
+      gap: 40px;
+      /* border: 1px solid #ccc; */
+      flex-direction: column;
+      /* background: tomato; */
+
+      article {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        /* background: #ccc; */
+
+        div.profile {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+
+          img {
+            width: 28px;
+            height: 28px;
+            /* border: 1px solid #f00; */
+          }
+        }
+        .user-img {
+          width: 100%;
+          height: 195px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .art-title {
+          font: bold 1.11rem/1 "돋움"; /*20 나누기 18= 1.11*/
+          margin-top: 2px;
+        }
+        .sub-detail {
+          p {
+            font: normal 0.58rem/1 "arial";
+          }
+        }
+
+        .art-info {
+          .like,
+          .view {
+            font: bold 0.82rem/1 "arial"; /*14px 기준이 뭔가요? 단위 변환 때문에....*/
+            color: #e9e7e7;
+            i {
+              color: #f00; /*미 설정시 위에 요소에 상속을 받는다.*/
+              margin-right: 3px;
+              &.fa-eye {
+                color: yellowgreen;
+              }
+            }
+          }
+        }
+
+        div.desc {
+          display: flex;
+          flex-direction: column; /* 세로 정렬 */
+
+          .user-name {
+            font-size: 0.7rem;
+          }
+          .date {
+            font-size: 0.6rem;
+            color: #c5c5c5;
+          }
+        }
+      }
+    }
+
+    header {
+      width: 100%;
+      height: 47px;
+      border: 1px solid #ccc;
+    }
+
+    #main-title {
+      margin: 50px 35px 40px;
+      font-size: 1.8rem;
+    }
+  }
+}

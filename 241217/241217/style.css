@@ -1,0 +1,57 @@
+/* reset.css-연결함 */
+@import url(./styles/reset.css);
+@import url(./styles/variables.css);
+@import url(./styles/fonts.css);
+
+/* common */
+@font-face {
+  font-family: Nexon Lv1 Gothic;
+  font-weight: 400;
+  src: url(./fonts/NEXON\ Lv1\ Gothic\ OTF.woff) format("woff");
+}
+
+@font-face {
+  font-family: Nexon Lv1 Gothic;
+  font-weight: 700;
+  src: url(./fonts/NEXON\ Lv1\ Gothic\ Low\ OTF\ Bold.woff) format("woff");
+}
+
+body {
+  font-family: Nexon Lv1 Gothic;
+  font-weight: 700;
+}
+
+/* contents */
+#container {
+  width: 100%;
+  background: #000;
+ 
+  #navigation-heading {
+    width: 1190px;
+    height: 60px;
+    margin: 0 auto;
+    border: 1px solid #fff;
+     #navigation {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      color: aliceblue;
+      height: 100%;
+
+      #logo {
+        font-size: 30px;
+      }
+
+      #gnb {
+        display: flex;
+        gap: 40px;
+      }
+    }
+  }
+}
+
+/* #naver {
+  font-family: var(--orbitron-font-family);
+} */
+/* 리팩토리 시킨다 */

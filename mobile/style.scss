@@ -1,0 +1,191 @@
+@import "./styles/reset";
+@import "./styles/variables";
+
+@mixin buttonStyle {
+  margin: 0 auto;
+  width: 360px;
+  height: 44px;
+  display: block;
+  color: map-get($contents-colors, textColor);
+  text-align: center;
+  line-height: 44px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  z-index: 2;
+}
+
+@mixin headerStyle {
+  background: map-get($contents-colors, lightColor);
+  padding: 60px 33px 135px;
+  header {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 142px;
+    h4 {
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.17rem;
+      font-weight: lighter;
+    }
+    p {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      font-size: 1.47rem;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@mixin filter {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 428px;
+  height: 439px;
+  background: linear-gradient(
+    to bottom,
+    map-get($contents-colors, lightColor) 80%,
+    transparent
+  );
+  z-index: 1;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  main {
+    width: 428px;
+    height: 926px;
+    background: map-get($contents-colors, bgColor);
+    box-shadow: 4px 4px 8px rgba($color: #000000, $alpha: 0.6);
+    padding-top: 60px;
+    #topContents {
+      text-align: center;
+      img {
+        margin-bottom: 30px;
+      }
+      h4 {
+        font-size: 1.17rem;
+        font-weight: lighter;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+    #snsLogon {
+      text-align: center;
+      margin: 200px 0;
+      h4 {
+        font-size: 0.94rem;
+        font-weight: lighter;
+        color: map-get($contents-colors, subColor);
+        margin-bottom: 10px;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
+    }
+    #bottomContents {
+      .btn {
+        @include buttonStyle;
+        background: map-get($contents-colors, btnColor);
+        .fa-download {
+          transform: rotate(-90deg);
+        }
+      }
+      #userSearch {
+        text-align: center;
+        color: map-get($contents-colors, textColor);
+        font-size: 1.17rem;
+        span {
+          &:first-child {
+            position: relative;
+            margin-right: 78px;
+            &::after {
+              content: "";
+              position: absolute;
+              top: 25%;
+              right: -40px;
+              width: 2px;
+              height: 14px;
+              background: map-get($contents-colors, textColor);
+            }
+          }
+        }
+      }
+    }
+    &.introBg {
+      @include headerStyle;
+      section {
+        margin: 50px 0 106px;
+      }
+      footer {
+        .btn {
+          @include buttonStyle;
+          margin-top: 10px;
+          background: map-get($contents-colors, bgColor);
+        }
+      }
+    }
+    &.friendsBg {
+      @include headerStyle;
+      position: relative;
+      header {
+        height: 172px;
+      }
+      section {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        ul {
+          li {
+            text-align: center;
+            a {
+              font-size: 2.35rem;
+            }
+          }
+        }
+      }
+      footer {
+        .buttons {
+          z-index: 2;
+          position: absolute;
+          bottom: 75px;
+          display: flex;
+          gap: 12px;
+          .btn {
+            @include buttonStyle;
+            width: 174px;
+            background: map-get($contents-colors, bgColor);
+            &:first-child {
+              background: map-get($contents-colors, btnColor);
+            }
+          }
+        }
+      }
+      &::before {
+        @include filter;
+        top: 0;
+      }
+      &::after {
+        @include filter;
+        bottom: 0;
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

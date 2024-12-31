@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        width: 100%;
+        height: 100vh;
+        border: 10px solid crimson;
+        display: flex;
+        flex-direction: column;
+        /* flex-direction: row; */
+        /* flex는 별도의 설정이 없다면 중심축은 무조건 가로 = row */
+        /* flex에 중심축을 변경하고자 한다면, 세로 = column */
+
+        /* 중심축을 기준으로 정렬 = justify-content */
+        /* flex-start / center / flex-end */
+        justify-content: center;
+
+        /* 교차축을 기준으로 정렬 = align-items */
+        align-items: center;
+
+        .child {
+          width: 200px;
+          height: 200px;
+          background: #000;
+          color: #fff;
+          text-align: center;
+          line-height: 200px;
+          font-size: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="parent">
+      <div class="child">Child</div>
+    </main>
+  </body>
+</html>
