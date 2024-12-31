@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form_입력 양식 태그</title>
+  </head>
+  <body>
+    <!-- 폼은 하나 이지만, 입력양식 값에 따라 속성 값이 달라진다. -->
+    <!-- 서버와의 소통때문에 속성 값이 있다. action /  method -->
+    <!-- 사용자와의 관계성도 중요하다.-->
+    <!-- 폼테그는 자식요소로써 인풋, 셀렉트, 옵션태그, 텍스트에어리어,등 있다 -->
+
+    <form action="http://127.0.0.1:5500/241231/index_06.html" method="get">
+      <!-- form에 자식요소로 input  search라는 이름으로 값을 받아 오겠다라는 의미를 갖고 있다  -->
+      <input type="text" name="search" />
+      <input type="password" />
+      <input type="file" />
+      <input type="submit" value="사용값 입력 값을 서버에 보낸다" />
+      <input type="button" value="그냥 버튼" />
+
+      <h4>당신이 좋아하는 스포츠를 선택해 주세요(복수선택가능)</h4>
+      <!-- name 값이 무엇이냐가 더 중요하다 중복 선택 불가능하게 할 수 있다. 사용자가 선택 값을 알수 있도록 서버에게 전달 할 수 있다 -->
+      <input type="checkbox" name="sports1" />축구
+      <input type="checkbox" name="sports2" />야구
+      <input type="checkbox" name="sports3" />배구
+      <input type="checkbox" name="sports4" />배드민턴
+      <input type="checkbox" name="sports5" />족구<br />
+
+      <!-- 복수 선택 불가능 : 라디오에 전원버튼처럼 생겼다 하여 라이오 버튼이라고 한다. -->
+      <h4>당신의 성별은?(복수 선택 불가능)</h4>
+      <!-- name="gender" 사용값 특정 값을 알려주기 위해서 서버에서 한개의 값만 받겠다고 ... 정의 -->
+      <input type="radio" name="gender" />여자
+      <input type="radio" name="gender" />남자<br /><br />
+
+      <!-- 같이 진행이 되어진다. -->
+      <input id="female" type="radio" name="gender" />
+      <label for="female">여자</label>
+
+      <label for="male">
+        <input id="male" type="radio" name="gender" />
+        남자</label
+      >
+
+      <input type="reset" />
+
+      <input type="date" />
+
+      <!-- 사용자가 폼을 활용해서 값을 입력 id/pw 입력값을 보내기 위해서 하는것이다 보내는 곳은 서버 이다. 액션이라는 속성의 값으로 받게 되어 있다. 
+       서버의 도착지점 / 서버의 주소를 의미한다. -->
+
+      <!-- 메서드===방법: 클라이언트와 서버와 통신하는 방법을 선택하는 것이다. 
+        get :특정정보값을 받아 오겠다. /post : t클라->서버에게 서버에 공간에 해당값을 업데이트 시키는 방식 -->
+
+      <!-- http://127.0.0.1:5500/241231/index_06.html?search=나이키
+        ? 커리 스트링 질의하다 물어보았다. -->
+    </form>
+  </body>
+</html>

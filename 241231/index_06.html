@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>audio 태그에 대해서</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      main {
+        width: 100%;
+        height: 100vh;
+        position: relative; /* 부모 컨테이너에 상대 위치 지정 */
+      }
+
+      video {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute; /* 부모 기준으로 정렬 */
+        top: 0;
+        left: 0;
+      }
+
+      main::after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: rgba(255, 0, 0, 0.8); /* 반투명 오버레이 */
+        z-index: 1; /* `video` 위에 표시되도록 설정 */
+      }
+
+      .dsct {
+        width: 500px;
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); /* 가운데 정렬 */
+        z-index: 2; /* 오버레이 위에 표시 */
+        text-align: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- <audio src="./contents/audio.mp4" controls autoplay loop></audio> -->
+    <!-- controls="contents" 속성과 값이 같을 경우 축약하여 하나로 쓸 수 있다. -->
+    <!-- autoplay 자동재생 -->
+    <!-- loop  무한재생 -->
+    <!-- 서버에 오디오나 비디오 올리면 데이터 용량이 돈이 서버에 무거워져서 서버에 용량이 돈이다. -->
+
+    <main>
+      <video src="./contents/video.mp4" autoplay loop></video>
+
+      <div class="dsct">
+        <h2>My Portfolio</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+          accusamus ut provident perspiciatis blanditiis excepturi eveniet
+          aspernatur at possimus autem, impedit libero exercitationem ratione
+          delectus tenetur ad omnis voluptates nisi.
+        </p>
+      </div>
+    </main>
+  </body>
+</html>

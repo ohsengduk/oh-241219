@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>체크 박스로 만들기</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* .warp {
+        margin: 50% auto;
+        width: 500px;
+        border: 1px solid #ccc;
+        padding: 50px;
+      }
+
+      span {
+        display: inline;
+        width: 100%;
+      } */
+
+      textarea {
+        resize: none; /*사용자가 임의로 사이즈로 임의로 변경 할 수 없도록... 막아 놓은것이다.  */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="warp">
+      <div class="top">
+        <span>신청과목</span>
+        <p>이달에 신청할 과목을 선택하세요!(*1과목만 선택가능)</p>
+
+        <input type="radio" name="" />회화 <input type="radio" name="" />문법
+        <input type="radio" name="" />작문
+      </div>
+
+      <div class="bottom">
+        <span>이메일링</span>
+        <p>이메일로 받고 싶은 뉴스 주제를 선택해 주세요(*복수 선택 가능)</p>
+
+        <input type="checkbox" />해외단신 <input type="checkbox" />5분회화
+        <input type="checkbox" />모닝팝스
+      </div>
+    </div>
+
+    <form aaction="#" method="post">
+      <fieldset>
+        <!-- form 전용 박스 -->
+        <legend><b>신청과목</b></legend>
+        <p>이달에 신청할 과목을 선택하세요!(*1과목만 선택가능)</p>
+
+        <label>
+          <input type="radio" name="" id="english01" />
+          <input type="radio" name="" id="english02" />
+          <input type="radio" name="" id="english03" />
+        </label>
+        <legend><b>이메일링</b></legend>
+        <p>이달에 신청할 과목을 선택하세요!(*복수 선택 가능)</p>
+
+        <label>
+          <input type="radio" name="" id="english01" />
+          <input type="radio" name="" id="english02" />
+          <input type="radio" name="" id="english03" />
+        </label>
+      </fieldset>
+
+      <!-- 하고 싶은 이야기 -->
+      <p>하고 싶은 이야기</p>
+      <!-- 댓글 창으로 많이 쓰인다. -->
+      <textarea
+        name="mystory"
+        id="mystory"
+        placeholder="당신의이야기"
+        rows="10"
+        cols="50"
+      ></textarea>
+      <h4>오늘 저녘 분식은 어떠세요?</h4>
+      <select name="food" id="food">
+        <option value="none" selected disabled>
+          원하시는 메뉴를 선택해 주세요
+        </option>
+        <option value="food1">김밥</option>
+        <option value="food2">떡복이</option>
+        <option value="food3">순대</option>
+        <option value="food4">붕어빵</option>
+      </select>
+    </form>
+  </body>
+</html>
