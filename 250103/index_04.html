@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전,후 문자 선택자</title>
+    <style>
+      p {
+        counter-increment: num;
+
+        &::before {
+          /* content: "1"; */
+          /* 테스트용으로 항상 써 봐야 한다. */
+          content: counter(num) ".";
+          /* counter(num) 상단에 매계 변수 값을 받아서 카운터를 해 준다. " . " 문자로 인지를 하게 해 준다.
+          코드의 재 사용이 중요하다. 
+             그래서 이거를 사용하는 것이다.
+             문장 앞에 붙는다. 
+             */
+        }
+
+        &::after {
+          content: " - " attr(data-page) "page";
+          /* after 쓰면 문장 뒤에 붙는다. */
+          /* 함수   attr() 매계변수 값을 찾아 온다. */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem ipsum dolor sit,</h1>
+    <p data-page="52">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit
+      accusamus, ullam maxime ex facilis vitae, reiciendis sed fugit esse non
+      mollitia aut corporis nemo? Alias nesciunt iusto incidunt ea in.
+    </p>
+    <p data-page="273">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi deserunt
+      possimus cupiditate, vero accusamus, eligendi perferendis a esse pariatur
+      veniam quibusdam unde id deleniti, vitae nisi maiores. Magni, id
+      asperiores. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+      Sequi deserunt possimus cupiditate, vero accusamus, eligendi perferendis a
+      esse pariatur veniam quibusdam unde id deleniti, vitae nisi maiores.
+      Magni, id asperiores. Lorem ipsum dolor, sit amet consectetur adipisicing
+      elit. Sequi deserunt possimus cupiditate, vero accusamus, eligendi
+      perferendis a esse pariatur veniam quibusdam unde id deleniti, vitae nisi
+      maiores. Magni, id asperiores. Lorem ipsum dolor, sit amet consectetur
+      adipisicing elit. Sequi deserunt possimus cupiditate, vero accusamus,
+      eligendi perferendis a esse pariatur veniam quibusdam unde id deleniti,
+      vitae nisi maiores. Magni, id asperiores. Lorem ipsum dolor, sit amet
+      consectetur adipisicing elit. Sequi deserunt possimus cupiditate, vero
+      accusamus, eligendi perferendis a esse pariatur veniam quibusdam unde id
+      deleniti, vitae nisi maiores. Magni, id asperiores.
+    </p>
+  </body>
+</html>
