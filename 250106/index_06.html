@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>화면하는 기본 구조</title>
+    <style>
+      *,
+      body,
+      h1,
+      p,
+      main {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #container {
+        width: 100%;
+        /* min-width: 800px;  */
+        /*줄어들 경우 지켜주는 */
+        max-width: 1300px;
+        height: 200px;
+      }
+
+      /* %는 상속받는 부모or 자식요소의 (위,또는 아래)의 높이 값에 영향을 받는다.  */
+      main {
+        width: 100%;
+        height: 100%;
+        /* 100% 컨덴츠가 가지고 있는 높이 값 만큼을 말하는 것이다. */
+        border: 5px solid #f23;
+        /* 뷰포트 : 사용자가 보여지고 있는 높이 값 만큼만 간다. 마운트가 된 시점으로 면적으로 간다. */
+        p {
+          height: 300px;
+          /* 자식요소에 높이 값이 적용된 적이 없다면, 내용의 기본 높이 값을 의미한다. 하지만 내부 요소의 높이 값을 적용 한다면
+          그 높이 값 만큼 적용이 된다.
+          */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <main>
+        <h1>hollo world!</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis
+          aut molestiae dolores blanditiis mollitia ullam, rerum similique totam
+          sit saepe deserunt corrupti velit dicta reprehenderit cumque modi.
+          Atque, voluptatibus laboriosam.
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

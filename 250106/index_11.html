@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폰트 속성</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-size: 16px;
+      }
+      main {
+        div {
+          /* normal  무게 400 노멀하게 간다는 것이다.기본 두께를 쓰도록 하겠다.*/
+          font-weight: normal;
+          font-size: 2rem;
+          line-height: 400px;
+          font-family: Arial, Helvetica, sans-serif;
+          background: dodgerblue;
+          color: aliceblue;
+          height: 400px;
+          text-align: center;
+          /* 높이값이다이랑 동일시 시키면 수직의 정렬처럼 보인다. 단문을 정렬인것 처럼 보이게 할 수 있다. 하지만 수직 정렬은 아닌 것이다. 텍스트와 텍스의 높이 값을을 주면 중앙 저럼 보이는 것이다. */
+
+          /* font: normal 2rem/400px Arial, Helvetica, sans-serif; */
+          /* bold, size, 높이, 스타일 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>hello world!</div>
+    </main>
+  </body>
+</html>

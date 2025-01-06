@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>박스 속성</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        /* border: 10px solid #000; */
+
+        color: #fff;
+        line-height: 200px;
+        text-align: center;
+        padding: 30px;
+        margin: 50px;
+        background-color: blue;
+
+        &:first-child {
+          border-color: aqua;
+          border-width: 8px;
+          border-style: dashed;
+        }
+
+        &:nth-child(2) {
+          box-sizing: content-box;
+          border-width: 8px;
+          border-style: double;
+          border-color: aquamarine;
+          border-radius: 0 20% 50% 5%;
+        }
+
+        /* :nth-child(3) */
+        &:last-child {
+          box-sizing: content-box;
+          border-width: 8px;
+          border-style: dotted;
+          border-color: #fff;
+          border-radius: 0 20% 50% 5%;
+          /* 
+          선생님 질문하기!! 
+          값을 안쪽이 아닌 밖에다가 하고 싶은데 어떻게 하나요? 
+          
+          */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+  </body>
+</html>

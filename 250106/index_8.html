@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가시 속성</title>
+    <style>
+      #box {
+        /* display: none; */
+
+        display: inline;
+        /* display: inline; */
+        /* 하나의 라인을 같이 사용하자 : 인라인  
+           width와 height 값이 적용되지 않는다.
+           magin: 좌, 우 측만 적용이 된다. 위,아래는 적용되지않음
+
+        */
+
+        /* display: block; */
+        /* 공간을 차지하게 하면서 동시에 사용자 눈에 보이게 끔하겠다 라는 의미 */
+
+        /* display: inline-block; */
+        /*
+        버튼은 width: height는 먹지 않는다 그래서 인라인 블럭으로 줬야지만 적용이 된다.
+        그래서 기본 속성값이 인라인인 경우에 인라이느 블럭으로 적용하여 사용 할수 있도록 
+        하기 위해서 사용하는 요소이다. 
+         */
+        background: crimson;
+        width: 300px;
+        height: 50px;
+        margin: 20px;
+
+        /* 
+        공간을 사용하는 특징을 보여준다, 
+
+        하나의 라인에 들어가게 하면서 블럭의 속성을 갖고 있음
+        
+        담겨있는 요소들이 하나의 행을 벗어나면 블럭처럼 보여 질 수 있도록 해준다.
+
+        글이 짦으면 인라인으로  글이 많으면 블럭처럼 보여지도록 한다. 
+        
+        */
+
+        /* visibility: hidden; */
+        /* 없지만 공간 자리는 남겨 둔다. */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- display
+    visiblility -->
+
+    <span>Dummy</span>
+    <div id="box">
+      <span>
+        Lorem ipsum dolor sit amet, consectetur ea sed.Lorem ipsum dolor sit
+        amet,
+      </span>
+    </div>
+    <span>Dummy</span>
+  </body>
+</html>
