@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rem_body 요소</title>
+    <style>
+      #default {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      #structure {
+        /* body 16px 기준으로 2배수로 바뀜  */
+        font-size: 2rem;
+
+        & > div {
+          font-size: 2rem;
+            & > div {
+            font-size: 1.5rem;
+              & > div {
+              font-size: 0.5rem;
+              }
+            }
+          }
+        }
+      }
+    </style>
+    <!-- h4 = 16px 폰트 사이즈로 가져가야 한다. -->
+    <h1>heading -1</h1>
+    <h2>heading -2</h2>
+    <h3>heading -3</h3>
+    <h4>heading -4</h4>
+    <div id="default">heading -4</div>
+    <h5>heading -5</h5>
+    <h6>heading -6</h6>
+
+    <div id="structure">
+      테스트1
+      <div>
+        테스트2
+        <div>
+          테스트3
+          <div>테스트4</div>
+        </div>
+      </div>
+    </div>
+  </head>
+  <body></body>
+</html>

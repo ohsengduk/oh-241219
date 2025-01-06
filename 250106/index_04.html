@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css 속성</title>
+    <style>
+      #default {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      #structure {
+        /* 16*2 부모요소를 기준으로 2배수로 나온다.
+        부모와 자식이 절대 쌍으로 가져갈 경우에만 사용해야한다. 라벨과 인풋태그는 em을 사용해야한다.
+
+        박스 구조로 내려가는 경우는 em은 너무 힘들다 부모기준으로 배수 계산을 한다.
+        그래서 나온것이 rem 가장 최상의 부모의 태그이다. body를 기준으로 계산이 된다.
+        */
+        font-size: 2em;
+
+        & > div {
+          font-size: 2em;
+            & > div {
+            font-size: 1.5em;
+              & > div {
+              font-size: 0.5em;
+              }
+            }
+          }
+        }
+      }
+    </style>
+    <!-- h4 = 16px 폰트 사이즈로 가져가야 한다. -->
+    <h1>heading -1</h1>
+    <h2>heading -2</h2>
+    <h3>heading -3</h3>
+    <h4>heading -4</h4>
+    <div id="default">heading -4</div>
+    <h5>heading -5</h5>
+    <h6>heading -6</h6>
+
+    <div id="structure">
+      테스트1
+      <div>
+        테스트2
+        <div>
+          테스트3
+          <div>테스트4</div>
+        </div>
+      </div>
+    </div>
+  </head>
+  <body></body>
+</html>
