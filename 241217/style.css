@@ -22,16 +22,16 @@ body {
 }
 
 /* contents */
+
 #container {
   width: 100%;
   background: #000;
- 
   #navigation-heading {
     width: 1190px;
     height: 60px;
     margin: 0 auto;
     border: 1px solid #fff;
-     #navigation {
+    #navigation {
       display: flex;
       align-items: center;
       justify-content: space-between;
