@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        border: 10px solid #000;
+        display: grid;
+
+        /* grid-template-columns: 200px 1fr 3fr; */
+        /*열 : 전체를 기준으로 200px 은 고정이고 3분1에서 나뉘서 가지고 가겠다라는 의미르 갖는다. */
+        /* grid-template-rows: 100px 200px; */
+        /* 행 : 그리드는 윤각이 나온다 직관적이기 때문이다.*/
+
+        /* grid:  컬럼과 로우를 정의할 수있다. */
+
+        grid: 100px 200px / auto auto auto;
+        /* rows, columns 를 한번에 축약해서 사용을 할 수 있다*/
+
+        div {
+          background: yellow;
+          border: 1px solid #0f0;
+          font-size: 30px;
+          padding: 0 20px;
+          text-align: center;
+          color: #fdd;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+</html>

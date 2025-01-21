@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      그리도 요소가 플랙스와 비슷하다 복습의 개념으로 복사복사하는ㄱ ㅓㅅ이다.
+    </title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parent {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        height: 300px;
+
+        div {
+          border: 1px solid #000;
+          background: cadetblue;
+          &:nth-child(1) {
+            background: crimson;
+            grid-column: 1 / span 2;
+            grid-row: 1;
+          }
+
+          &:nth-child(2) {
+            background: yellowgreen;
+            grid-column-start: 3;
+            grid-row: 1 / span 2;
+          }
+
+          &:nth-child(5) {
+            background: blueviolet;
+            grid-row: 3;
+            grid-column: 1 / span 3;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>
+        <div>헤더</div>
+        1
+      </div>
+      <div>2 right bar</div>
+      <div>3 content</div>
+      <div>4 content</div>
+      <div>footer</div>
+    </div>
+  </body>
+</html>

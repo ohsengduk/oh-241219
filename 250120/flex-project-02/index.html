@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 제이쿼리 -->
+    <script src="./jqur/jquery-3.7.1.min.js"></script>
+
+    <!-- 슬릭 슬라이더 -->
+    <link rel="stylesheet" href="./slick/slick.css" />
+    <link rel="stylesheet" href="./slick/slick-theme.css" />
+    <script src="./slick/slick.js"></script>
+
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/3f2ea24883.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- custom css & js -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- 반드시 메인 css가 나오고 그 다음에 반응형 css가 나와야 한다. -->
+    <link rel="stylesheet" href="./styles/responsive.css" />
+
+    <script defer src="./script.js"></script>
+    <title>Flex-Project</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <div class="banner">
+          <ul class="lnb">
+            <li>
+              <a href="#"><em>for</em> member</a>
+            </li>
+            <li>
+              <a href="#"><em>for</em> client</a>
+            </li>
+            <li>
+              <a href="#"><em>for</em> inquire</a>
+            </li>
+          </ul>
+        </div>
+        <nav>
+          <div class="logo">
+            <a href="#">
+              <img src="./images/logo.png" alt="logo" />
+            </a>
+          </div>
+          <ul class="gnb">
+            <li><a href="#intro">HOME</a></li>
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#ranking">RANKING</a></li>
+            <li><a href="#testmonial">TESTIMONIAL</a></li>
+            <li><a href="#blog">BLOG</a></li>
+          </ul>
+        </nav>
+
+        <div class="trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </header>
+
+      <section id="intro" class="intro">
+        <div class="inner">
+          <div class="heading">
+            <h1>The World's Best Cities</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam,
+              dolores quis quibusdam error optio veritatis praesentium quaerat
+              amet repudiandae asperiores corporis iure, distinctio nobis ad
+              architecto voluptatem? Adipisci, officia suscipit.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="inner">
+          <div class="about-content">
+            <div class="desc">
+              <h2>About Best Cities in the World</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+                numquam illo saepe eligendi libero eius perspiciatis atque,
+                aspernatur quod itaque impedit ut vitae doloribus architecto eum
+                velit, harum omnis natus!
+              </p>
+              <a href="#">Visit The Place Information</a>
+            </div>
+            <div class="photo">
+              <img src="./images/about-img-01.jpg" alt="about" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="ranking" class="ranking">
+        <div classs="inner">
+          <div class="ranking-content">
+            <h2>the world's 3 beset ditdkfkakdfk ~~~~</h2>
+
+            <div class="items">
+              <!-- item 1 -->
+              <div class="item">
+                <div class="up-image">
+                  <img src="./images/best-city-01.jpg" alt="city01" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge good">Good to Go</span>
+                  <h3>London, England</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ullam minus facere rem velit dicta sequi quaerat modi,
+                    consequuntur maiores, voluptas voluptatum porro accusamus
+                    eveniet repellendus architecto quos est sint unde!
+                  </p>
+                  <a class="btn-explore" href="#">
+                    Explore
+                    <img src="./images/icon-arrow.png" alt="arrow" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- item 2 -->
+              <div class="item">
+                <div class="up-image">
+                  <img src="./images/best-city-02.jpg" alt="city01" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge must">must Go</span>
+                  <h3>NewYor, United States</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ullam minus facere rem velit dicta sequi quaerat modi,
+                    consequuntur maiores, voluptas voluptatum porro accusamus
+                    eveniet repellendus architecto quos est sint unde!
+                  </p>
+                  <a class="btn-explore" href="#">
+                    Explore
+                    <img src="./images/icon-arrow.png" alt="arrow" />
+                  </a>
+                </div>
+              </div>
+
+              <!-- item 3 -->
+              <div class="item">
+                <div class="up-image">
+                  <img src="./images/best-city-03.jpg" alt="city01" />
+                </div>
+                <div class="down-desc">
+                  <span class="badge good">Good to Go</span>
+                  <h3>London, England</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Ullam minus facere rem velit dicta sequi quaerat modi,
+                    consequuntur maiores, voluptas voluptatum porro accusamus
+                    eveniet repellendus architecto quos est sint unde!
+                  </p>
+                  <a class="btn-explore" href="#">
+                    Explore
+                    <img src="./images/icon-arrow.png" alt="arrow" />
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- items -->
+          </div>
+          <!-- ranking-content -->
+        </div>
+        <!-- inner -->
+      </section>
+
+      <section id="testimonial" class="testimonial">
+        <div class="inner">
+          <div class="testimonial-content">
+            <h2>what <b>our customers</b> are saying</h2>
+            <hr />
+            <div class="myslider">
+              <div>
+                <p class="client">
+                  <img src="./images/client-01.jpg" alt="" />
+                  <span><b>Iu</b>Seoul, Korea</span>
+                </p>
+                <p class="comment">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum corporis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-02.jpg" alt="" />
+                  <span><b>kate Whiteney</b>LosAngeles, US</span>
+                </p>
+                <p class="comment">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum corporis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-03.jpg" alt="" />
+                  <span><b>Kelly Muvils</b>NewYork</span>
+                </p>
+                <p class="comment">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum corporis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-04.jpg" alt="" />
+                  <span><b>Oliver</b>Califoina, US</span>
+                </p>
+                <p class="comment">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum corporis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-05.jpg" alt="" />
+                  <span><b>Sophia</b>Lodon, UK</span>
+                </p>
+                <p class="comment">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum corporis
+                </p>
+              </div>
+              <div>
+                <p class="client">
+                  <img src="./images/client-06.jpg" alt="" />
+                  <span><b>char lotte</b>Washigton, US</span>
+                </p>
+                <p class="comment">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Ipsum corporis
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="callaction">
+        <div class="callaction-heading">
+          <h2>
+            The Most Simple & <b>Powerfull Way</b> <br />to book your trip
+          </h2>
+          <a href="#">Get early access</a>
+        </div>
+      </section>
+
+      <section id="blog" class="blog">
+        <div class="inner">
+          <div class="blog-content">
+            <div class="blog-header">
+              <h6>feature article</h6>
+              <h2>can american visit mexico</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                quo optio maxime iusto consequatur in ab animi temporibus, a,
+                aliquam odit eius saepe suscipit officia voluptate aut
+                laboriosam quis id?
+              </p>
+
+              <a class="btn-explore" href="#">
+                Read more
+                <img src="./images/icon-arrow.png" alt="" />
+              </a>
+
+              <hr class="divider" />
+              <!-- 공통사항은 전역 요소로 빼주기  -->
+            </div>
+
+            <div class="post-content">
+              <div class="resent-post-items">
+                <h6>most resent</h6>
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-recent-01.jpg" alt="최신여행지" />
+                  </div>
+
+                  <div class="post-desc">
+                    <h3>world ocean travel</h3>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Totam aspernatur deleniti officia, repudiandae veritatis
+                      magni nulla sit quas libero ut commodi, accusantium
+                      mollitia culpa ad ratione quibusdam temporibus possimus.
+                      Minima.
+                    </p>
+                    <span>jan 15, 2025</span>
+                  </div>
+                </div>
+                <hr class="divider" />
+
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-recent-02.jpg" alt="최신여행지" />
+                  </div>
+
+                  <div class="post-desc">
+                    <h3>world ocean travel</h3>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Totam aspernatur deleniti officia, repudiandae veritatis
+                      magni nulla sit quas libero ut commodi, accusantium
+                      mollitia culpa ad ratione quibusdam temporibus possimus.
+                      Minima.
+                    </p>
+                    <span>jan 15, 2025</span>
+                  </div>
+                </div>
+                <hr class="divider" />
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-recent-03.jpg" alt="최신여행지" />
+                  </div>
+
+                  <div class="post-desc">
+                    <h3>come to south korea</h3>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Totam aspernatur deleniti officia, repudiandae veritatis
+                      magni nulla sit quas libero ut commodi, accusantium
+                      mollitia culpa ad ratione quibusdam temporibus possimus.
+                      Minima.
+                    </p>
+                    <span>jan 15, 2025</span>
+                  </div>
+                </div>
+                <hr class="divider" />
+              </div>
+
+              <div class="shared-post-items">
+                <h6>most shared</h6>
+
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-shared-01.jpg" alt="" />
+                  </div>
+                  <div class="post-desc">
+                    <h3>events in nyc</h3>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Dolores, dolorum expedita repudiandae omnis sequi labore
+                      accusamus officiis quos perspiciatis eius, illo ducimus,
+                      quibusdam vel? Incidunt, corporis! Voluptas nihil ipsum
+                      similique?
+                    </p>
+                    <span> jan ,15 2025 </span>
+                  </div>
+                </div>
+
+                <div class="post-item">
+                  <div class="post-image">
+                    <img src="./images/most-shared-02.jpg" alt="" />
+                  </div>
+                  <div class="post-desc">
+                    <h3>festivals</h3>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Dolores, dolorum expedita repudiandae omnis sequi labore
+                      accusamus officiis quos perspiciatis eius, illo ducimus,
+                      quibusdam vel? Incidunt, corporis! Voluptas nihil ipsum
+                      similique?
+                    </p>
+                    <span> jan ,21 2025 </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="festival">
+        <div class="festival-heading">
+          <h3><span>See All Fesitvals</span> for the Best trip Place</h3>
+          <div class="btn">
+            <a href="#">Mexico Festivals</a>
+            <a href="#">barcelona Festivals</a>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <div class="inner">
+          <div class="footer-content">
+            <ul class="community">
+              <li><a href="#">community</a></li>
+              <li><a href="#">Subscrive</a></li>
+              <li><a href="#">Give a Gift</a></li>
+              <li><a href="#">exercitationem</a></li>
+              <li><a href="#">molestiae</a></li>
+            </ul>
+            <ul class="network">
+              <li><a href="#">network</a></li>
+              <li><a href="#">pridkfkd</a></li>
+              <li><a href="#">sint eius</a></li>
+              <li><a href="#">Advertis</a></li>
+              <li><a href="#">jos</a></li>
+            </ul>
+            <ul class="help">
+              <li><a href="#">help</a></li>
+              <li>
+                <a href="#"
+                  >Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Eligendi fuga, asperiores modi
+                </a>
+              </li>
+              <li><a href="#">nihil placeat rerum eius.</a></li>
+              <li><a href="#"> Doloribus temporibus rem eos</a></li>
+              <li>
+                <a href="#">
+                  cum, recusandae laboriosam exercitationem qui molestiae libero
+                  expedita sint eius</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <a class="gototop" href="#intro">
+      <i class="fas fa-angle-up"></i>
+    </a>
+  </body>
+</html>

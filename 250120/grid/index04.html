@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      그리도 요소가 플랙스와 비슷하다 복습의 개념으로 복사복사하는ㄱ ㅓㅅ이다.
+    </title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .parent {
+        border: 10px solid #000;
+        background: rgb(94, 227, 245);
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-items: center;
+        align-items: center;
+
+        height: 300px;
+
+        div {
+          background: darkorange;
+          /* width: 100px;
+          height: 100px;
+          line-height: 100px; */
+          /* 값이 줄어 듦. */
+          text-align: center;
+          color: #fff;
+          border: 1px solid #000;
+
+          &:nth-child(2) {
+            /* 부모요소의 값은 자식이 맞는 것이 아니라 스스로 값을 챙겨야 한다. 
+              부모요소의 값을 모두 사용하겠다는 개념이stretch 이다.
+            */
+            justify-self: stretch;
+            align-self: stretch;
+            /* 독립적으로도 값을 주어서 움직일 수가 있다. */
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>1</div>
+      <div>2</div>
+    </div>
+  </body>
+</html>

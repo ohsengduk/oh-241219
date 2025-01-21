@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문법 공부 후 예제 만들기</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        grid-gap: 5px;
+        grid-template-columns: 300;
+        grid-template-rows: 100px 150px 1fr 150px 100px;
+        grid-template-columns: 300px 1fr 300px;
+        background: #ddd;
+
+        div {
+          background: skyblue;
+          display: grid;
+          justify-items: center;
+          align-items: center;
+          border: 1px solid #000;
+
+          &.header {
+            grid-area: hdaer;
+          }
+          &.menu {
+            grid-area: menu;
+          }
+          &.section {
+          }
+          &.top {
+          }
+          &.aside {
+          }
+          &.bottom {
+          }
+          &.footer {
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrapper">
+      <div class="header">header</div>
+      <div class="menu"></div>
+      <div class="section">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+      </div>
+      <div class="top"></div>
+      <div class="aside"></div>
+      <div class="bottom"></div>
+      <div class="footer"></div>
+    </main>
+  </body>
+</html>

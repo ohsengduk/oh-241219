@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      그리도 요소가 플랙스와 비슷하다 복습의 개념으로 복사복사하는ㄱ ㅓㅅ이다.
+    </title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .parent {
+        border: px solid #000;
+        background: rgb(94, 227, 245);
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+
+        div {
+          background: darkorange;
+          text-align: center;
+          color: #fff;
+          border: 1px solid #000;
+          height: 100px;
+          line-height: 100px;
+
+          &.item {
+            background: crimson;
+            /*
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-column: 1/3;
+            grid-column: 1 / span 2;
+            /* 공간span분할 태그  1번의 라인에서 공간 2개를 사용해라~ 라는 의미를 갖는다.*/
+
+            grid-column-start: 2;
+            grid-column-end: 4;
+
+            /* grid-column: 2/4;
+            grid-column: 2 / span 2;
+
+            grid-row-start: 1;
+            grid-row-end: 5; */
+
+            /*
+            grid-column: 2;
+            grid-row: 1 / span 4;*/
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div>1</div>
+      <div class="item">2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+    </div>
+  </body>
+</html>
